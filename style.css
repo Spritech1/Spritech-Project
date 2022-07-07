@@ -211,7 +211,7 @@ li span:hover{
 }
 .team{
 	display: grid;
-	grid-template-rows:300px;
+	grid-template-rows:minmax(300px, auto);
 	grid-template-columns: repeat(4, 1fr);
 	padding:5% 5% ;
 	gap: 20px;
@@ -245,6 +245,7 @@ li span:hover{
 .team-card{
 	background: white;
 	z-index: 20000;
+	font-family: sans-serif;
 	
 }
 .card-body{
@@ -305,6 +306,9 @@ li span:hover{
 	font-size: 60px;
 	color: #80b435;
 	padding: 15px;
+}
+.Statistics i:hover{
+	transform: scale(1.0) rotate(360deg);
 }
 .statistics h5{
 	font-family: sans-serif;
@@ -377,6 +381,10 @@ li span:hover{
 .end-note .end-copy{
 	margin-bottom: 20px;
 }
+.end-copy{
+	margin-left: 20px;
+	text-align: center;
+}
 .about-us{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -388,14 +396,18 @@ li span:hover{
 .about-repair{
 	font-family: sans-serif;
 	margin-left: 30px;
+	margin-bottom: 20px;
 }
 .about-contact{
 	font-family: sans-serif;
 	padding-top: 5px;
+	margin-left: 30px;
+	margin-bottom: 20px;
 }
 .about-support{
 	font-family: sans-serif;
 	padding-top: 5px;
+	margin-left: 30px;
 }
 .envelope{
 	display: flex;
@@ -423,4 +435,112 @@ li span:hover{
 .caret{
 	line-height: 30px;
 	font-family: sans-serif;
+}
+.menu-btn{
+	display: none;
+}
+
+@media  (max-width: 768px){
+.about-us{
+	grid-template-columns: 1fr;	
+	place-items: unset;
+	font-size: 1rem;
+}
+.team{
+	grid-template-columns: 1fr;
+	row-gap: 12px;
+}
+.request h5{
+	font-size: 1rem;
+	line-height: 20px;
+}
+.statistics{
+	grid-template-columns: repeat(2, 1fr);
+	font-size: 1rem;
+}
+.cards-2{
+	grid-template-columns: 1fr;
+}
+.cards{
+	grid-template-columns: repeat(2, 1fr);
+}
+.experience{
+	display: inline-block;
+}
+.flex1{
+	text-align: center;
+	margin-bottom: 30px;
+}
+.flex2{
+	text-align: justify;
+}
+.banner h1{
+	font-size: 2rem;
+	margin-bottom: 30px;
+}
+.steps {
+	font-size: 1rem;
+}
+.experts{
+	font-size: 1rem;
+	margin-bottom: 30px;
+}
+.stats{
+	font-size: 1rem;
+}
+.brands{
+	font-size: 1rem;
+}
+.end-copy{
+	font-size: 1rem;
+	text-align: center;
+}
+.team-card{
+	font-size: 1rem;
+}
+.tag{
+	border-radius: 35px;
+}
+.header-contact{
+	display: none;
+}
+.log{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+}
+.menu{
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	background:rgb( 5, 5, 5);
+	z-index: 20000;
+	padding: 12px 5px;
+	position: absolute;
+	top: 130px;
+	left: 0;
+	width: 50vw;
+	border-bottom-right-radius: 15px;
+	transform: translateX(-500px);
+	transition: ease 0.5s;
+}
+.menu.show{
+	transform: translateX(-2px);
+	transition: ease-in-out 0.2s;
+}
+.log img{
+	font-size: 4rem;
+}
+.menu-btn i{
+	font-size: 20px;
+	position: absolute;
+	right: 5px;
+}
+.log nav a{
+	color: white;
+}
+.menu-btn{
+	display: block;
+	position: relative;
+}
 }
